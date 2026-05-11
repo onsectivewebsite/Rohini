@@ -359,6 +359,23 @@ ul { list-style: none; }
 }
 .modal-close:hover { background: #fee2e2; transform: rotate(90deg); }
 
+/* ── BEFORE/AFTER SCROLLER ── */
+.results-scroller {
+  display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 2rem;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin; scrollbar-color: var(--green) #f3f4f6;
+}
+.results-scroller::-webkit-scrollbar { height: 8px; }
+.results-scroller::-webkit-scrollbar-track { background: #f3f4f6; border-radius: 10px; }
+.results-scroller::-webkit-scrollbar-thumb { background: var(--green); border-radius: 10px; }
+.rs-item {
+  min-width: 300px; max-width: 350px; flex-shrink: 0;
+  scroll-snap-align: start; border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: var(--transition);
+}
+.rs-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.rs-item img { width: 100%; height: 320px; object-fit: cover; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-container, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
