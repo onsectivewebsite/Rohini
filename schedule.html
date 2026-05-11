@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule & Timings | Dt. Rohini's Diet Clinic – Batala & Amritsar</title>
+  <meta name="description" content="Clinic timings for Dt. Rohini's Diet Clinic. Mon & Thu + Sunday in Batala. Tue & Friday in Amritsar. Online worldwide."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .big-schedule-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-bottom:3rem; }
+    .big-schedule-card { border-radius:24px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.1); transition:all 0.35s; }
+    .big-schedule-card:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(0,0,0,0.15); }
+    .bsc-header { padding:2rem; color:white; }
+    .bsc-header.green { background:linear-gradient(135deg,#2d7a3a,#4caf50); }
+    .bsc-header.orange { background:linear-gradient(135deg,#e07b2a,#f5a623); }
+    .bsc-header.purple { background:linear-gradient(135deg,#5b21b6,#8b5cf6); }
+    .bsc-header .loc-icon { font-size:2.5rem; margin-bottom:0.8rem; }
+    .bsc-header h2 { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; margin-bottom:0.3rem; }
+    .bsc-header p { font-size:0.88rem; opacity:0.9; }
+    .bsc-body { background:white; padding:1.5rem; }
+    .day-row { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; border-bottom:1px solid #f3f4f6; }
+    .day-row:last-child { border-bottom:none; }
+    .day-info { display:flex; align-items:center; gap:0.8rem; }
+    .day-dot { width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#2d7a3a,#4caf50); flex-shrink:0; }
+    .day-dot.orange { background:linear-gradient(135deg,#e07b2a,#f5a623); }
+    .day-dot.purple { background:linear-gradient(135deg,#5b21b6,#8b5cf6); }
+    .day-name { font-weight:700; font-size:0.95rem; color:#1a1a2e; }
+    .day-time { font-size:0.88rem; color:#6b7280; font-weight:500; display:flex; align-items:center; gap:0.4rem; }
+    .address-card { background:white; border-radius:20px; padding:2rem; box-shadow:0 6px 30px rgba(0,0,0,0.08); display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .addr-block h4 { font-size:1rem; font-weight:700; color:#1a1a2e; margin-bottom:0.8rem; display:flex; align-items:center; gap:0.5rem; }
+    .addr-block p { font-size:0.88rem; color:#6b7280; line-height:1.7; }
+    .map-placeholder { background:linear-gradient(135deg,#f0faf2,#fdf8f2); border-radius:16px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1rem; border:2px dashed #d1fae5; margin-top:2rem; }
+    .map-placeholder p { color:#6b7280; font-size:0.9rem; }
+    .week-visual { display:grid; grid-template-columns:repeat(7,1fr); gap:0.5rem; margin:2rem 0; }
+    .week-day { border-radius:12px; padding:1rem 0.5rem; text-align:center; transition:all 0.3s; }
+    .week-day .wd-name { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem; }
+    .week-day .wd-loc { font-size:0.7rem; font-weight:600; padding:0.2rem 0.4rem; border-radius:6px; }
+    .week-day.batala { background:rgba(45,122,58,0.08); border:1.5px solid rgba(45,122,58,0.2); }
+    .week-day.batala .wd-name { color:#2d7a3a; }
+    .week-day.batala .wd-loc { background:#2d7a3a; color:white; }
+    .week-day.amritsar { background:rgba(224,123,42,0.08); border:1.5px solid rgba(224,123,42,0.2); }
+    .week-day.amritsar .wd-name { color:#e07b2a; }
+    .week-day.amritsar .wd-loc { background:#e07b2a; color:white; }
+    .week-day.off { background:#f9fafb; border:1.5px solid #e5e7eb; }
+    .week-day.off .wd-name { color:#9ca3af; }
+    .week-day.off .wd-loc { background:#e5e7eb; color:#9ca3af; }
+    .week-day.batala.sunday .wd-loc { font-size:0.6rem; }
+    @media(max-width:600px){ .address-card{grid-template-columns:1fr;} .week-visual{grid-template-columns:repeat(4,1fr);} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="schedule.html" class="active">Schedule</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Schedule</span></div>
+  <h1>Clinic <span class="gradient-text">Schedule & Locations</span></h1>
+  <p>Find Dt. Rohini at Batala, Amritsar, or connect online — wherever you are in the world.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Weekly Schedule</div>
+      <h2 class="section-title">Clinic <span class="gradient-text">Timings</span></h2>
+    </div>
+
+    <!-- WEEK VISUAL -->
+    <div class="week-visual">
+      <div class="week-day off"><div class="wd-name">Sun</div><div class="wd-loc">Batala<br/>11–1:30</div></div>
+      <div class="week-day batala"><div class="wd-name">Mon</div><div class="wd-loc">Batala</div></div>
+      <div class="week-day amritsar"><div class="wd-name">Tue</div><div class="wd-loc">Amritsar</div></div>
+      <div class="week-day off"><div class="wd-name">Wed</div><div class="wd-loc">—</div></div>
+      <div class="week-day batala"><div class="wd-name">Thu</div><div class="wd-loc">Batala</div></div>
+      <div class="week-day amritsar"><div class="wd-name">Fri</div><div class="wd-loc">Amritsar</div></div>
+      <div class="week-day off"><div class="wd-name">Sat</div><div class="wd-loc">—</div></div>
+    </div>
+
+    <div class="big-schedule-grid">
+      <!-- BATALA -->
+      <div class="big-schedule-card">
+        <div class="bsc-header green">
+          <div class="loc-icon">📍</div>
+          <h2>Batala Clinic</h2>
+          <p>House No. 29, Radha Krishna Colony, Gate No. 3<br/>Near Dr. Ravinder Singh Hospital, Batala, Punjab – 143505</p>
+        </div>
+        <div class="bsc-body">
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot"></div><div class="day-name">Monday</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 3:30 PM</div>
+          </div>
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot"></div><div class="day-name">Thursday</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 3:30 PM</div>
+          </div>
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot"></div><div class="day-name">Sunday</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 1:30 PM</div>
+          </div>
+          <div style="margin-top:1.2rem;">
+            <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-calendar-check"></i> Book Batala Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AMRITSAR -->
+      <div class="big-schedule-card">
+        <div class="bsc-header orange">
+          <div class="loc-icon">📍</div>
+          <h2>Amritsar Clinic</h2>
+          <p>Amritsar, Punjab<br/>(Exact address shared on booking confirmation)</p>
+        </div>
+        <div class="bsc-body">
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot orange"></div><div class="day-name">Tuesday</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 3:30 PM</div>
+          </div>
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot orange"></div><div class="day-name">Friday</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 3:30 PM</div>
+          </div>
+          <div style="margin-top:1.2rem;">
+            <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#e07b2a,#f5a623);"><i class="fa fa-calendar-check"></i> Book Amritsar Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ONLINE -->
+      <div class="big-schedule-card">
+        <div class="bsc-header purple">
+          <div class="loc-icon">💻</div>
+          <h2>Online Worldwide</h2>
+          <p>WhatsApp / Video Call consultations<br/>Available across 25+ countries</p>
+        </div>
+        <div class="bsc-body">
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Monday – Friday</div></div>
+            <div class="day-time"><i class="fa fa-globe"></i> Flexible Timings</div>
+          </div>
+          <div class="day-row">
+            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Saturday</div></div>
+            <div class="day-time"><i class="fa fa-globe"></i> By Appointment</div>
+          </div>
+          <div style="margin-top:1.2rem;">
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#25D366,#128C7E);" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp for Online Booking</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDRESS -->
+    <div class="section-header" style="margin-top:3rem;">
+      <div class="section-tag">Find Us</div>
+      <h2 class="section-title">Clinic <span class="gradient-text">Addresses</span></h2>
+    </div>
+    <div class="address-card">
+      <div class="addr-block">
+        <h4>📍 Batala (Main Clinic)</h4>
+        <p>House No. 29<br/>Radha Krishna Colony, Gate No. 3<br/>Near Dr. Ravinder Singh Hospital<br/>Batala – 143505<br/>Punjab, India</p>
+        <br/>
+        <a href="https://maps.google.com/?q=Batala,Punjab,India" target="_blank" class="btn-secondary" style="display:inline-flex;font-size:0.85rem;padding:0.6rem 1.2rem;">
+          <i class="fa fa-map-marker-alt"></i> Open in Google Maps
+        </a>
+      </div>
+      <div class="addr-block">
+        <h4>📍 Amritsar Clinic</h4>
+        <p>Amritsar, Punjab, India<br/>(Exact location shared on confirmation)</p>
+        <br/>
+        <h4 style="margin-top:1.5rem;">📞 Book an Appointment</h4>
+        <p>Call or WhatsApp us to book your slot at either clinic or for online consultations worldwide.</p>
+        <br/>
+        <a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.6rem 1.2rem;">
+          <i class="fa fa-phone"></i> Contact Us
+        </a>
+      </div>
+    </div>
+
+    <div class="map-placeholder">
+      <span style="font-size:3rem;">🗺️</span>
+      <p>Batala, Radha Krishna Colony, Gate No. 3, Punjab – 143505</p>
+      <a href="https://maps.google.com/?q=Radha+Krishna+Colony+Batala+Punjab" target="_blank" class="btn-secondary" style="font-size:0.85rem;padding:0.6rem 1.4rem;">
+        <i class="fa fa-map-marker-alt"></i> View on Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/>
+      <p>Expert nutrition care by Dt. Rohini Sachdeva — transforming 20,000+ lives since 2015 with personalised diet plans in India and worldwide.</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="results.html">Results</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Timings</h4>
+      <span>📍 Batala – Mon & Thu: 11 AM – 3:30 PM</span>
+      <span>📍 Batala – Sunday: 11 AM – 1:30 PM</span>
+      <span>📍 Amritsar – Tue & Fri: 11 AM – 3:30 PM</span>
+      <span>💻 Online – Mon–Sat (Flexible)</span>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Dt. Rohini's Diet Clinic. All rights reserved.</p></div>
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-fab" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

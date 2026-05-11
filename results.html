@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Results | Dt. Rohini's Diet Clinic</title>
+  <meta name="description" content="Real before & after transformation results from clients of Dt. Rohini's Diet Clinic — 20,000+ satisfied clients across India and 25+ countries."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .results-filter { display:flex; flex-wrap:wrap; gap:0.7rem; justify-content:center; margin-bottom:2.5rem; }
+    .filter-btn { padding:0.5rem 1.3rem; border-radius:50px; border:1.5px solid #e5e7eb; background:white; color:#6b7280; font-size:0.85rem; font-weight:600; cursor:pointer; transition:all 0.3s; }
+    .filter-btn.active, .filter-btn:hover { background:var(--gradient); color:white; border-color:transparent; box-shadow:0 4px 15px rgba(45,122,58,0.3); }
+    .results-masonry { columns:3; gap:1.5rem; }
+    .result-item { break-inside:avoid; margin-bottom:1.5rem; border-radius:16px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.1); cursor:pointer; transition:all 0.3s; position:relative; }
+    .result-item:hover { transform:scale(1.02); box-shadow:0 15px 40px rgba(0,0,0,0.18); }
+    .result-item img { width:100%; display:block; }
+    .result-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%); opacity:0; transition:all 0.3s; display:flex; align-items:flex-end; padding:1rem; }
+    .result-item:hover .result-overlay { opacity:1; }
+    .result-overlay span { color:white; font-size:0.85rem; font-weight:600; }
+    @media(max-width:768px){ .results-masonry{columns:2;} }
+    @media(max-width:480px){ .results-masonry{columns:1;} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Results</span></div>
+  <h1>Real Client <span class="gradient-text">Transformations</span></h1>
+  <p>These are real people, real results — no filters, no shortcuts. Just science-backed nutrition and dedication.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Proof That Works</div>
+      <h2 class="section-title">20,000+ <span class="gradient-text">Success Stories</span></h2>
+      <p class="section-subtitle">Every transformation is unique. Every story is real. Here are just a few of the thousands who chose to change their lives with Dt. Rohini.</p>
+    </div>
+
+    <div class="results-masonry" id="resultsGrid">
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM.jpeg" alt="Weight loss transformation" loading="lazy"/>
+        <div class="result-overlay"><span>35 kgs Weight Reduction</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (1).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Amazing Transformation</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (2).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Incredible Results</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM.jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Body Transformation</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM (1).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Health Journey</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.21 PM.jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Weight Loss Success</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.21 PM (1).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Life Changed</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.21 PM (2).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Transformation Story</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.22 PM.jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Fat Loss Journey</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.22 PM (1).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Real Results</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.22 PM (2).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Success Story</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.23 PM.jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Amazing Progress</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.23 PM (1).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Health Transformation</span></div>
+      </div>
+      <div class="result-item" onclick="openModal(this)">
+        <img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.23 PM (2).jpeg" alt="Client transformation" loading="lazy"/>
+        <div class="result-overlay"><span>Goal Achieved</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(45,122,58,0.05),rgba(76,175,80,0.05));border-radius:20px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:0.8rem;">Ready to Write Your Own Success Story?</h3>
+      <p style="color:#6b7280;margin-bottom:1.5rem;">Join 20,000+ people who have transformed their health with Dt. Rohini's personalised nutrition plans.</p>
+      <a href="contact.html" class="btn-primary"><i class="fa fa-calendar-check"></i> Book Your Consultation Today</a>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modalImg" src="" alt="Transformation"/>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/>
+      <p>Expert nutrition care by Dt. Rohini Sachdeva — transforming 20,000+ lives since 2015.</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="results.html">Results</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <span>📍 House No. 29, Radha Krishna Colony, Gate No. 3, Batala, Punjab – 143505</span>
+      <span style="margin-top:0.5rem;">🕐 Mon & Thu: 11 AM – 3:30 PM</span>
+      <span>🕐 Sunday: 11 AM – 1:30 PM</span>
+      <span>🕐 Tue & Fri (Amritsar): 11 AM – 3:30 PM</span>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Dt. Rohini's Diet Clinic. All rights reserved.</p></div>
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-fab" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

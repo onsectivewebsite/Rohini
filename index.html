@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dt. Rohini's Diet Clinic | Expert Nutritionist in Batala & Amritsar</title>
+  <meta name="description" content="Dt. Rohini Sachdeva – Certified Nutritionist since 2015. 20,000+ satisfied clients, serving 25+ countries. Weight loss, diabetes, PCOD, renal, liver & more."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .expertise-strip { background: linear-gradient(135deg,#2d7a3a,#4caf50); padding: 2rem; overflow: hidden; }
+    .expertise-scroll { display: flex; gap: 2rem; animation: scroll 22s linear infinite; white-space: nowrap; }
+    .expertise-scroll:hover { animation-play-state: paused; }
+    @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .expertise-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.18); color: white; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.88rem; font-weight: 600; flex-shrink:0; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .why-card { background: white; border-radius: 16px; padding: 1.8rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; }
+    .why-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+    .why-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .why-card h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
+    .why-card p { font-size: 0.82rem; color: #6b7280; line-height: 1.5; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1.5rem; }
+    .testimonial-card { background: white; border-radius: 16px; padding: 1.8rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-left: 4px solid #4caf50; }
+    .testimonial-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .testimonial-text { font-size: 0.9rem; color: #374151; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg,#2d7a3a,#4caf50); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; }
+    .author-name { font-weight: 700; font-size: 0.88rem; color: #1a1a2e; }
+    .author-loc { font-size: 0.78rem; color: #6b7280; }
+    .online-banner { background: linear-gradient(135deg,#1a1a2e 0%,#2d3748 100%); padding: 4rem 2rem; text-align: center; color: white; }
+    .online-banner h2 { font-family:'Playfair Display',serif; font-size: clamp(1.6rem,3vw,2.4rem); margin-bottom: 1rem; }
+    .online-banner p { color: rgba(255,255,255,0.75); max-width: 550px; margin: 0 auto 2rem; line-height:1.7; }
+    .countries-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; max-width: 700px; margin: 0 auto 2rem; }
+    .country-chip { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.15); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic Logo"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badge"><span></span> Certified Nutritionist Since 2015</div>
+      <h1 class="hero-title">
+        Transform Your Health with<br/>
+        <span class="highlight">Expert Nutrition Care</span>
+      </h1>
+      <p class="hero-subtitle">
+        Personalised diet plans for weight loss, medical conditions & holistic wellness by <strong>Dt. Rohini Sachdeva</strong> — trusted by thousands across India and the world.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">20K+</span><span class="label">Happy Clients</span></div>
+        <div class="hero-stat"><div class="sep"></div></div>
+        <div class="hero-stat"><span class="num">25+</span><span class="label">Countries Served</span></div>
+        <div class="hero-stat"><div class="sep"></div></div>
+        <div class="hero-stat"><span class="num">10+</span><span class="label">Years Experience</span></div>
+      </div>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary"><i class="fa fa-calendar-check"></i> Book Appointment</a>
+        <a href="results.html" class="btn-secondary"><i class="fa fa-images"></i> See Results</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-bg"></div>
+        <div class="hero-photo">
+          <img src="logo/rohini.jpeg" alt="Dt. Rohini Sachdeva – Expert Nutritionist"/>
+        </div>
+        <div class="hero-floating-card card-1">
+          <div class="card-inner">
+            <span class="card-icon">🏆</span>
+            <div class="card-text">
+              <strong>20,000+ Clients</strong>
+              <span>Successfully Transformed</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-floating-card card-2">
+          <div class="card-inner">
+            <span class="card-icon">🌍</span>
+            <div class="card-text">
+              <strong>25+ Countries</strong>
+              <span>Online Consultations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE STRIP -->
+<div class="expertise-strip">
+  <div class="expertise-scroll" id="expertiseScroll">
+    <span class="expertise-tag">⚖️ Weight Loss</span>
+    <span class="expertise-tag">🔥 Fat Loss</span>
+    <span class="expertise-tag">💪 Muscle Building</span>
+    <span class="expertise-tag">🩸 Diabetes Management</span>
+    <span class="expertise-tag">🫀 Liver Disorders</span>
+    <span class="expertise-tag">🫘 Renal Disorders</span>
+    <span class="expertise-tag">🌾 Celiac Disease</span>
+    <span class="expertise-tag">🦋 Thyroid</span>
+    <span class="expertise-tag">🌸 PCOD</span>
+    <span class="expertise-tag">👰 Pre-Wedding Diet</span>
+    <span class="expertise-tag">🦴 Arthritis</span>
+    <span class="expertise-tag">🤱 Infertility Diet</span>
+    <!-- duplicate for seamless loop -->
+    <span class="expertise-tag">⚖️ Weight Loss</span>
+    <span class="expertise-tag">🔥 Fat Loss</span>
+    <span class="expertise-tag">💪 Muscle Building</span>
+    <span class="expertise-tag">🩸 Diabetes Management</span>
+    <span class="expertise-tag">🫀 Liver Disorders</span>
+    <span class="expertise-tag">🫘 Renal Disorders</span>
+    <span class="expertise-tag">🌾 Celiac Disease</span>
+    <span class="expertise-tag">🦋 Thyroid</span>
+    <span class="expertise-tag">🌸 PCOD</span>
+    <span class="expertise-tag">👰 Pre-Wedding Diet</span>
+    <span class="expertise-tag">🦴 Arthritis</span>
+    <span class="expertise-tag">🤱 Infertility Diet</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-banner">
+  <div class="stats-inner">
+    <div class="stat-item"><span class="stat-num" data-target="20000">0</span><div class="stat-lbl">Satisfied Clients</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="25">0</span><div class="stat-lbl">Countries Served</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="10">0</span><div class="stat-lbl">Years of Experience</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="12">0</span><div class="stat-lbl">Areas of Expertise</div></div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Science-Backed, <span class="gradient-text">Personalised Nutrition</span></h2>
+      <p class="section-subtitle">Every diet plan is crafted specifically for you — your body, your lifestyle, your goals.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon">🎓</div><h4>Highly Qualified</h4><p>PG Diploma in Dietetics, Apollo Hospital Internship & multiple certifications</p></div>
+      <div class="why-card"><div class="why-icon">📋</div><h4>Personalised Plans</h4><p>Custom diet charts tailored to your medical history and lifestyle</p></div>
+      <div class="why-card"><div class="why-icon">🌐</div><h4>Online & In-Person</h4><p>Consultations available online for clients worldwide or in-clinic</p></div>
+      <div class="why-card"><div class="why-icon">💬</div><h4>Ongoing Support</h4><p>Regular follow-ups and adjustments for best results throughout your journey</p></div>
+      <div class="why-card"><div class="why-icon">🏥</div><h4>Medical Expertise</h4><p>Specialised in chronic conditions — diabetes, PCOD, renal, liver & more</p></div>
+      <div class="why-card"><div class="why-icon">❤️</div><h4>Proven Results</h4><p>20,000+ transformations speak for themselves — real results, real people</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">Comprehensive <span class="gradient-text">Nutrition Programs</span></h2>
+      <p class="section-subtitle">From weight management to complex medical dietary needs — we've got you covered.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">⚖️</div><h3>Weight & Fat Loss</h3><p>Sustainable, science-backed programmes that melt fat without starving you.</p></div>
+      <div class="service-card"><div class="service-icon">💪</div><h3>Muscle Building</h3><p>High-protein, performance-optimised plans to fuel muscle growth effectively.</p></div>
+      <div class="service-card"><div class="service-icon">🩸</div><h3>Diabetes Management</h3><p>Blood-sugar balancing diet strategies that work alongside your medical care.</p></div>
+      <div class="service-card"><div class="service-icon">🦋</div><h3>Hormonal Disorders</h3><p>Thyroid, PCOD & infertility-focused nutrition to restore hormonal balance.</p></div>
+      <div class="service-card"><div class="service-icon">🫀</div><h3>Liver & Renal Care</h3><p>Therapeutic diets designed for liver & kidney health and recovery.</p></div>
+      <div class="service-card"><div class="service-icon">👰</div><h3>Pre-Wedding Diet</h3><p>Glow-up nutrition plans for brides & grooms to look their absolute best.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="services.html" class="btn-primary">View All Services <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE SERVICES -->
+<div class="online-banner">
+  <h2>Online Consultations Available <span style="color:#4caf50">Worldwide</span></h2>
+  <p>Can't visit the clinic? No problem. Dt. Rohini provides expert online diet consultations to clients in 25+ countries. Get the same personalised care from the comfort of your home.</p>
+  <div class="countries-row">
+    <span class="country-chip">🇮🇳 India</span><span class="country-chip">🇦🇪 UAE</span><span class="country-chip">🇺🇸 USA</span>
+    <span class="country-chip">🇬🇧 UK</span><span class="country-chip">🇨🇦 Canada</span><span class="country-chip">🇦🇺 Australia</span>
+    <span class="country-chip">🇸🇬 Singapore</span><span class="country-chip">🇳🇿 New Zealand</span><span class="country-chip">🇰🇼 Kuwait</span>
+    <span class="country-chip">🇸🇦 Saudi Arabia</span><span class="country-chip">+ 15 more</span>
+  </div>
+  <a href="contact.html" class="btn-primary"><i class="fab fa-whatsapp"></i> Start Online Consultation</a>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Client Love</div>
+      <h2 class="section-title">What Our Clients <span class="gradient-text">Say</span></h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I lost 22 kgs in 4 months with Dt. Rohini's plan. No crash dieting, no starvation — just a balanced, practical approach that actually fits my lifestyle."</p>
+        <div class="testimonial-author"><div class="author-avatar">RS</div><div><div class="author-name">Rajinder Singh</div><div class="author-loc">Batala, Punjab</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"My PCOD symptoms reduced significantly within 3 months. Rohini ji understands hormonal conditions deeply and her diet plan truly made a difference."</p>
+        <div class="testimonial-author"><div class="author-avatar">PK</div><div><div class="author-name">Priya Khanna</div><div class="author-loc">Amritsar, Punjab</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Being a diabetic I was confused about what to eat. Dt. Rohini gave me a clear, delicious and effective plan. My sugar levels are now completely under control."</p>
+        <div class="testimonial-author"><div class="author-avatar">MV</div><div><div class="author-name">Manpreet Verma</div><div class="author-loc">Dubai, UAE</div></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="results.html" class="btn-secondary">See Transformation Stories <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Visit Us</div>
+      <h2 class="section-title">Clinic <span class="gradient-text">Schedule</span></h2>
+      <p class="section-subtitle">Find us at Batala and Amritsar — or connect online from anywhere in the world.</p>
+    </div>
+    <div class="schedule-cards">
+      <div class="schedule-card">
+        <div class="schedule-header batala">
+          <span class="schedule-header-icon">📍</span>
+          <div><h3>Batala Clinic</h3><p>Radha Krishna Colony, Gate No. 3</p></div>
+        </div>
+        <div class="schedule-body">
+          <div class="schedule-row"><span class="day-badge">Mon & Thu</span><span class="schedule-time">11:00 AM – 3:30 PM</span></div>
+          <div class="schedule-row"><span class="day-badge">Sunday</span><span class="schedule-time">11:00 AM – 1:30 PM</span></div>
+        </div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-header amritsar">
+          <span class="schedule-header-icon">📍</span>
+          <div><h3>Amritsar Clinic</h3><p>Tuesday & Friday Sessions</p></div>
+        </div>
+        <div class="schedule-body">
+          <div class="schedule-row"><span class="day-badge amritsar">Tue & Fri</span><span class="schedule-time">11:00 AM – 3:30 PM</span></div>
+        </div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-header online">
+          <span class="schedule-header-icon">💻</span>
+          <div><h3>Online Worldwide</h3><p>Via WhatsApp / Video Call</p></div>
+        </div>
+        <div class="schedule-body">
+          <div class="schedule-row"><span class="day-badge" style="background:rgba(91,33,182,0.1);color:#5b21b6;">Mon – Sat</span><span class="schedule-time">Flexible Timings</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="schedule.html" class="btn-secondary">Full Schedule & Address <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/>
+      <p>Expert nutrition care by Dt. Rohini Sachdeva — transforming 20,000+ lives since 2015 with personalised diet plans in India and worldwide.</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Dr. Rohini</a>
+      <a href="services.html">Services</a>
+      <a href="results.html">Client Results</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <span>📍 House No. 29, Radha Krishna Colony, Gate No. 3, near Dr. Ravinder Singh Hospital, Batala, Punjab – 143505</span>
+      <span style="margin-top:0.5rem;">🕐 Mon & Thu: 11 AM – 3:30 PM</span>
+      <span>🕐 Sunday: 11 AM – 1:30 PM</span>
+      <span>🕐 Tue & Fri (Amritsar): 11 AM – 3:30 PM</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Dt. Rohini's Diet Clinic. All rights reserved. | Designed with ❤️ for healthier lives.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-fab" title="Chat on WhatsApp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

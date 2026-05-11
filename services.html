@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Dt. Rohini's Diet Clinic – Nutritionist Batala & Amritsar</title>
+  <meta name="description" content="Expert nutrition services: weight loss, diabetes, PCOD, thyroid, liver, renal, pre-wedding diet plans and more by Dt. Rohini Sachdeva."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .services-main-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; }
+    .svc-card { background:white; border-radius:20px; overflow:hidden; box-shadow:0 6px 30px rgba(0,0,0,0.07); transition:all 0.35s; border:1px solid rgba(0,0,0,0.04); }
+    .svc-card:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(0,0,0,0.13); }
+    .svc-top { padding:2rem; }
+    .svc-icon-wrap { width:64px; height:64px; border-radius:18px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1rem; }
+    .svc-top h3 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:#1a1a2e; margin-bottom:0.5rem; }
+    .svc-top p { font-size:0.87rem; color:#6b7280; line-height:1.6; }
+    .svc-divider { height:1px; background:#f3f4f6; margin:0 2rem; }
+    .svc-body { padding:1.2rem 2rem; }
+    .svc-body ul { display:flex; flex-direction:column; gap:0.5rem; }
+    .svc-body li { display:flex; gap:0.6rem; font-size:0.86rem; color:#374151; }
+    .svc-body li::before { content:'✓'; color:#2d7a3a; font-weight:700; flex-shrink:0; }
+    .svc-footer { padding:1rem 2rem 1.5rem; }
+    .svc-link { color:#2d7a3a; font-size:0.88rem; font-weight:600; display:inline-flex; align-items:center; gap:0.4rem; transition:all 0.3s; }
+    .svc-link:hover { gap:0.8rem; }
+    .process-wrap { background:white; border-radius:24px; padding:3rem; box-shadow:0 6px 30px rgba(0,0,0,0.08); }
+    .process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .process-step { text-align:center; padding:1.5rem 1rem; }
+    .step-num { width:54px; height:54px; border-radius:50%; background:var(--gradient); color:white; font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; box-shadow:0 6px 20px rgba(45,122,58,0.3); }
+    .process-step h4 { font-size:0.92rem; font-weight:700; color:#1a1a2e; margin-bottom:0.4rem; }
+    .process-step p { font-size:0.8rem; color:#6b7280; }
+    .online-dark { background:linear-gradient(135deg,#1a1a2e 0%,#2d3748 100%); border-radius:24px; padding:3rem; color:white; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; }
+    .online-dark h2 { font-family:'Playfair Display',serif; font-size:1.8rem; margin-bottom:1rem; }
+    .online-dark p { color:rgba(255,255,255,0.75); line-height:1.8; margin-bottom:1.5rem; }
+    .online-feats { display:flex; flex-direction:column; gap:0.8rem; }
+    .online-feat { display:flex; align-items:center; gap:0.8rem; background:rgba(255,255,255,0.07); border-radius:10px; padding:0.75rem 1rem; font-size:0.87rem; color:rgba(255,255,255,0.9); }
+    @media(max-width:768px){ .process-steps{grid-template-columns:repeat(2,1fr);} .online-dark{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html" class="nav-cta">Book Consultation</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> › <span>Services</span></div>
+  <h1>Our <span class="gradient-text">Services</span></h1>
+  <p>Comprehensive, personalised nutrition programmes for every health goal and medical condition.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">What We Offer</div>
+      <h2 class="section-title">Expert Nutrition <span class="gradient-text">Programmes</span></h2>
+      <p class="section-subtitle">Each programme is built around you — your health, your body, and your lifestyle.</p>
+    </div>
+    <div class="services-main-grid">
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(45,122,58,0.12),rgba(76,175,80,0.08))">⚖️</div>
+          <h3>Weight & Fat Loss</h3>
+          <p>Achieve your ideal weight sustainably — no crash diets, no starvation. Smart, balanced nutrition that lasts.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Personalised calorie & macro targets</li>
+          <li>Indian food-based practical meal plans</li>
+          <li>Weekly body composition tracking</li>
+          <li>Metabolism-boosting strategies</li>
+          <li>Anti-craving & hunger management</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(91,33,182,0.12),rgba(139,92,246,0.08))">💪</div>
+          <h3>Muscle Building</h3>
+          <p>Fuel your fitness goals with performance-optimised nutrition for strength and lean muscle growth.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>High-protein personalised diet plans</li>
+          <li>Pre & post workout meal strategies</li>
+          <li>Supplement guidance</li>
+          <li>Lean bulk & clean bulk approaches</li>
+          <li>Recovery nutrition for athletes</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(190,18,60,0.1),rgba(244,63,94,0.06))">🩸</div>
+          <h3>Diabetes Management</h3>
+          <p>Keep blood sugar levels stable with a practical diet plan working alongside your medical care.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Glycaemic index–focused meal plans</li>
+          <li>Type 1 & Type 2 diabetes plans</li>
+          <li>Low-sugar Indian recipe alternatives</li>
+          <li>Coordination with your doctor</li>
+          <li>Monitoring and follow-up support</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(14,116,144,0.1),rgba(6,182,212,0.06))">🦋</div>
+          <h3>Thyroid, PCOD & Hormonal</h3>
+          <p>Restore hormonal balance naturally with targeted nutrition for thyroid, PCOD, and infertility.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Hypothyroid & hyperthyroid diet plans</li>
+          <li>PCOD / PCOS hormonal nutrition</li>
+          <li>Fertility-supportive diet strategies</li>
+          <li>Anti-inflammatory food protocols</li>
+          <li>Lifestyle & sleep nutrition guidance</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(180,83,9,0.1),rgba(245,158,11,0.06))">🫀</div>
+          <h3>Liver & Renal Disorders</h3>
+          <p>Medically guided therapeutic diets to protect and support liver and kidney function during treatment.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Low-sodium, low-potassium kidney diets</li>
+          <li>Fatty liver reversal nutrition plans</li>
+          <li>Dialysis-compatible diet strategies</li>
+          <li>Protein management for renal patients</li>
+          <li>Hepatitis & cirrhosis dietary support</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(146,64,14,0.1),rgba(217,119,6,0.06))">🌾</div>
+          <h3>Celiac Disease</h3>
+          <p>Complete gluten-free nutrition plans ensuring full nourishment while managing celiac safely.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Strict gluten-free meal planning</li>
+          <li>Indian gluten-free food alternatives</li>
+          <li>Nutritional deficiency correction</li>
+          <li>Cross-contamination guidance</li>
+          <li>Gut healing nutrition protocols</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(224,123,42,0.12),rgba(245,166,35,0.07))">👰</div>
+          <h3>Pre-Wedding Diet Plans</h3>
+          <p>Look and feel your absolute best on your special day — bespoke plans for brides and grooms.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>3 to 6 month wedding transformation plans</li>
+          <li>Skin glow & hair health nutrition</li>
+          <li>Energy for wedding functions</li>
+          <li>Healthy weight management</li>
+          <li>Post-wedding maintenance plans</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-top">
+          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(6,95,70,0.1),rgba(16,185,129,0.06))">🦴</div>
+          <h3>Arthritis & More</h3>
+          <p>Anti-inflammatory nutrition plans to manage arthritis, joint pain, and other chronic conditions.</p>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-body"><ul>
+          <li>Anti-inflammatory diet protocols</li>
+          <li>Joint-supportive nutrient plans</li>
+          <li>Omega-3 and antioxidant-rich meals</li>
+          <li>Weight reduction to ease joint stress</li>
+          <li>Gout & uric acid management</li>
+        </ul></div>
+        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">How It Works</div>
+      <h2 class="section-title">Your Journey to <span class="gradient-text">Better Health</span></h2>
+    </div>
+    <div class="process-wrap">
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Initial Consultation</h4>
+          <p>Share your health history, goals, and lifestyle with Dt. Rohini in person or online</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Personalised Plan</h4>
+          <p>Receive a fully customised, practical diet chart within 24–48 hours</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Follow-Up Sessions</h4>
+          <p>Regular check-ins to track progress and fine-tune your plan as needed</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Achieve Your Goal</h4>
+          <p>Reach your targets with sustained support and expert guidance every step of the way</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE -->
+<section class="section">
+  <div class="container">
+    <div class="online-dark">
+      <div>
+        <h2>Online Consultations <span style="color:#4caf50">Worldwide</span></h2>
+        <p>Distance is no barrier to expert nutrition. Dt. Rohini provides the same high-quality, personalised consultation online to clients across 25+ countries via WhatsApp, Zoom, or video call.</p>
+        <a href="contact.html" class="btn-primary"><i class="fab fa-whatsapp"></i> Book Online Now</a>
+      </div>
+      <div class="online-feats">
+        <div class="online-feat">💻 Video & WhatsApp consultations</div>
+        <div class="online-feat">📊 Digital diet charts sent instantly</div>
+        <div class="online-feat">🌍 Serving 25+ countries worldwide</div>
+        <div class="online-feat">⏰ Flexible appointment timings</div>
+        <div class="online-feat">🔄 Regular online follow-ups</div>
+        <div class="online-feat">🔒 Private & confidential sessions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo/logo.png" alt="Dt. Rohini's Diet Clinic"/>
+      <p>Expert nutrition care by Dt. Rohini Sachdeva — transforming 20,000+ lives since 2015 with personalised diet plans in India and worldwide.</p>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="results.html">Results</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <span>📍 House No. 29, Radha Krishna Colony, Gate No. 3, near Dr. Ravinder Singh Hospital, Batala, Punjab – 143505</span>
+      <span style="margin-top:0.5rem;">🕐 Mon & Thu: 11 AM – 3:30 PM</span>
+      <span>🕐 Sunday: 11 AM – 1:30 PM</span>
+      <span>🕐 Tue & Fri (Amritsar): 11 AM – 3:30 PM</span>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Dt. Rohini's Diet Clinic. All rights reserved.</p></div>
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-fab" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>
