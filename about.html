@@ -26,20 +26,20 @@
     .timeline-content h4 { font-size:0.95rem; font-weight:700; color:#1a1a2e; margin-bottom:0.3rem; }
     .timeline-content p { font-size:0.85rem; color:#6b7280; line-height:1.6; }
     .expertise-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
-    .expertise-item { display:flex; align-items:center; gap:1rem; background:white; border-radius:12px; padding:1rem 1.2rem; box-shadow:0 3px 15px rgba(0,0,0,0.06); transition:all 0.3s; }
-    .expertise-item:hover { transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.1); }
     .expertise-item-icon { font-size:1.8rem; flex-shrink:0; }
     .expertise-item h4 { font-size:0.9rem; font-weight:700; color:#1a1a2e; }
     .expertise-item p { font-size:0.78rem; color:#6b7280; }
     .mission-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.5rem; }
-    .mission-card { background:white; border-radius:16px; padding:2rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.06); border-top:4px solid; transition:all 0.3s; }
-    .mission-card:hover { transform:translateY(-6px); }
+    .mission-card { background:white; border-radius:16px; padding:2rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.06); border-top:4px solid; transition:all 0.3s; display: block; text-decoration: none; color: inherit; }
+    .mission-card:hover { transform:translateY(-6px); box-shadow: var(--shadow-lg); }
     .mission-card:nth-child(1){ border-color:#2d7a3a; }
     .mission-card:nth-child(2){ border-color:#e07b2a; }
     .mission-card:nth-child(3){ border-color:#5b21b6; }
     .mission-card .icon { font-size:2.4rem; margin-bottom:1rem; }
     .mission-card h3 { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:0.6rem; color:#1a1a2e; }
     .mission-card p { font-size:0.85rem; color:#6b7280; line-height:1.6; }
+    .expertise-item { display:flex; align-items:center; gap:1rem; background:white; border-radius:12px; padding:1rem 1.2rem; box-shadow:0 3px 15px rgba(0,0,0,0.06); transition:all 0.3s; text-decoration: none; color: inherit; }
+    .expertise-item:hover { transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.1); border-right: 3px solid var(--green); }
   </style>
 </head>
 <body>
@@ -108,9 +108,9 @@
       <h2 class="section-title">The <span class="gradient-text">Dietcare</span> Approach</h2>
     </div>
     <div class="mission-grid">
-      <div class="mission-card"><div class="icon">🎯</div><h3>Personalised Care</h3><p>No templates. Every plan is designed from scratch based on your unique body, health, and goals.</p></div>
-      <div class="mission-card"><div class="icon">🔬</div><h3>Science-Backed</h3><p>Evidence-based nutrition strategies grounded in clinical research and real-world results.</p></div>
-      <div class="mission-card"><div class="icon">🤝</div><h3>Compassionate Support</h3><p>A judgment-free zone where your journey is supported with empathy and consistent guidance.</p></div>
+      <a href="contact.html" class="mission-card"><div class="icon">🎯</div><h3>Personalised Care</h3><p>No templates. Every plan is designed from scratch based on your unique body, health, and goals.</p></a>
+      <a href="contact.html" class="mission-card"><div class="icon">🔬</div><h3>Science-Backed</h3><p>Evidence-based nutrition strategies grounded in clinical research and real-world results.</p></a>
+      <a href="contact.html" class="mission-card"><div class="icon">🤝</div><h3>Compassionate Support</h3><p>A judgment-free zone where your journey is supported with empathy and consistent guidance.</p></a>
     </div>
   </div>
 </section>
@@ -123,18 +123,18 @@
       <h2 class="section-title">Specialised in <span class="gradient-text">12+ Health Areas</span></h2>
     </div>
     <div class="expertise-list">
-      <div class="expertise-item"><span class="expertise-item-icon">⚖️</span><div><h4>Weight Loss</h4><p>Sustainable fat reduction programmes</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🔥</span><div><h4>Fat Loss</h4><p>Targeted body composition improvement</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">💪</span><div><h4>Muscle Building</h4><p>Performance & strength nutrition plans</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🩸</span><div><h4>Diabetes</h4><p>Blood sugar management through diet</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🫀</span><div><h4>Liver Disorders</h4><p>Liver-supportive therapeutic nutrition</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🫘</span><div><h4>Renal Disorders</h4><p>Kidney-safe diet plans & management</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🌾</span><div><h4>Celiac Disease</h4><p>Gluten-free complete nutrition plans</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🦋</span><div><h4>Thyroid</h4><p>Thyroid-supportive dietary strategies</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🌸</span><div><h4>PCOD</h4><p>Hormonal balance through food choices</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🤱</span><div><h4>Infertility Diet</h4><p>Nutrition plans to support fertility</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">👰</span><div><h4>Pre-Wedding Plans</h4><p>Bride & groom transformation diets</p></div></div>
-      <div class="expertise-item"><span class="expertise-item-icon">🦴</span><div><h4>Arthritis & More</h4><p>Anti-inflammatory nutrition support</p></div></div>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">⚖️</span><div><h4>Weight Loss</h4><p>Sustainable fat reduction programmes</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🔥</span><div><h4>Fat Loss</h4><p>Targeted body composition improvement</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">💪</span><div><h4>Muscle Building</h4><p>Performance & strength nutrition plans</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🩸</span><div><h4>Diabetes</h4><p>Blood sugar management through diet</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🫀</span><div><h4>Liver Disorders</h4><p>Liver-supportive therapeutic nutrition</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🫘</span><div><h4>Renal Disorders</h4><p>Kidney-safe diet plans & management</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🌾</span><div><h4>Celiac Disease</h4><p>Gluten-free complete nutrition plans</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🦋</span><div><h4>Thyroid</h4><p>Thyroid-supportive dietary strategies</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🌸</span><div><h4>PCOD</h4><p>Hormonal balance through food choices</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🤱</span><div><h4>Infertility Diet</h4><p>Nutrition plans to support fertility</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">👰</span><div><h4>Pre-Wedding Plans</h4><p>Bride & groom transformation diets</p></div></a>
+      <a href="services.html" class="expertise-item"><span class="expertise-item-icon">🦴</span><div><h4>Arthritis & More</h4><p>Anti-inflammatory nutrition support</p></div></a>
     </div>
   </div>
 </section>

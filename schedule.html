@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     .big-schedule-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-bottom:3rem; }
-    .big-schedule-card { border-radius:24px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.1); transition:all 0.35s; }
+    .big-schedule-card { border-radius:24px; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.1); transition:all 0.35s; display: block; text-decoration: none; color: inherit; }
     .big-schedule-card:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(0,0,0,0.15); }
     .bsc-header { padding:2rem; color:white; }
     .bsc-header.green { background:linear-gradient(135deg,#2d7a3a,#4caf50); }
@@ -101,7 +101,7 @@
 
     <div class="big-schedule-grid">
       <!-- BATALA -->
-      <div class="big-schedule-card">
+      <a href="contact.html" class="big-schedule-card">
         <div class="bsc-header green">
           <div class="loc-icon">📍</div>
           <h2>Batala Clinic</h2>
@@ -121,13 +121,13 @@
             <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 1:30 PM</div>
           </div>
           <div style="margin-top:1.2rem;">
-            <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-calendar-check"></i> Book Batala Appointment</a>
+            <div class="btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-calendar-check"></i> Book Batala Appointment</div>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- AMRITSAR -->
-      <div class="big-schedule-card">
+      <a href="contact.html" class="big-schedule-card">
         <div class="bsc-header orange">
           <div class="loc-icon">📍</div>
           <h2>Amritsar Clinic</h2>
@@ -143,32 +143,32 @@
             <div class="day-time"><i class="fa fa-clock"></i> 11:00 AM – 3:30 PM</div>
           </div>
           <div style="margin-top:1.2rem;">
-            <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#e07b2a,#f5a623);"><i class="fa fa-calendar-check"></i> Book Amritsar Appointment</a>
+            <div class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#e07b2a,#f5a623);"><i class="fa fa-calendar-check"></i> Book Amritsar Appointment</div>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- ONLINE -->
-      <div class="big-schedule-card">
+      <a href="contact.html" class="big-schedule-card">
         <div class="bsc-header purple">
           <div class="loc-icon">💻</div>
           <h2>Online Worldwide</h2>
-          <p>WhatsApp / Video Call consultations<br/>Available across 25+ countries</p>
+          <p>Consultations via Video Call & WhatsApp<br/>Serving clients in 25+ countries</p>
         </div>
         <div class="bsc-body">
           <div class="day-row">
-            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Monday – Friday</div></div>
-            <div class="day-time"><i class="fa fa-globe"></i> Flexible Timings</div>
+            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Mon – Sat</div></div>
+            <div class="day-time"><i class="fa fa-clock"></i> Flexible Timings</div>
           </div>
           <div class="day-row">
-            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Saturday</div></div>
-            <div class="day-time"><i class="fa fa-globe"></i> By Appointment</div>
+            <div class="day-info"><div class="day-dot purple"></div><div class="day-name">Timezones</div></div>
+            <div class="day-time"><i class="fa fa-globe"></i> IST / GMT / EST / GST</div>
           </div>
           <div style="margin-top:1.2rem;">
-            <a href="https://wa.me/918427164000" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#25D366,#128C7E);" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp for Online Booking</a>
+            <div class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#5b21b6,#8b5cf6);"><i class="fab fa-whatsapp"></i> Start Online Consultation</div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- ADDRESS -->

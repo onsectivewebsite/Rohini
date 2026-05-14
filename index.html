@@ -23,13 +23,13 @@
     @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
     .expertise-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.18); color: white; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.88rem; font-weight: 600; flex-shrink:0; }
     .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-    .why-card { background: white; border-radius: 16px; padding: 1.8rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; }
-    .why-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+    .why-card { background: white; border-radius: 16px; padding: 1.8rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; display: block; text-decoration: none; color: inherit; }
+    .why-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); border-bottom: 3px solid var(--green); }
     .why-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
     .why-card h4 { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
     .why-card p { font-size: 0.82rem; color: #6b7280; line-height: 1.5; }
     .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1.5rem; }
-    .testimonial-card { background: white; border-radius: 16px; padding: 1.8rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-left: 4px solid #4caf50; }
+    .testimonial-card { background: white; border-radius: 16px; padding: 1.8rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-left: 4px solid #4caf50; display: block; text-decoration: none; color: inherit; transition: var(--transition); }
     .testimonial-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 0.8rem; }
     .testimonial-text { font-size: 0.9rem; color: #374151; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
     .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
@@ -166,12 +166,12 @@
       <p class="section-subtitle">Every diet plan is crafted specifically for you — your body, your lifestyle, your goals.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card"><div class="why-icon">🎓</div><h4>Highly Qualified</h4><p>PG Diploma in Dietetics, Apollo Hospital Internship & multiple certifications</p></div>
-      <div class="why-card"><div class="why-icon">📋</div><h4>Personalised Plans</h4><p>Custom diet charts tailored to your medical history and lifestyle</p></div>
-      <div class="why-card"><div class="why-icon">🌐</div><h4>Online & In-Person</h4><p>Consultations available online for clients worldwide or in-clinic</p></div>
-      <div class="why-card"><div class="why-icon">💬</div><h4>Ongoing Support</h4><p>Regular follow-ups and adjustments for best results throughout your journey</p></div>
-      <div class="why-card"><div class="why-icon">🏥</div><h4>Medical Expertise</h4><p>Specialised in chronic conditions — diabetes, PCOD, renal, liver & more</p></div>
-      <div class="why-card"><div class="why-icon">❤️</div><h4>Proven Results</h4><p>20,000+ transformations speak for themselves — real results, real people</p></div>
+      <a href="contact.html" class="why-card"><div class="why-icon">🎓</div><h4>Highly Qualified</h4><p>PG Diploma in Dietetics, Apollo Hospital Internship & multiple certifications</p></a>
+      <a href="contact.html" class="why-card"><div class="why-icon">📋</div><h4>Personalised Plans</h4><p>Custom diet charts tailored to your medical history and lifestyle</p></a>
+      <a href="contact.html" class="why-card"><div class="why-icon">🌐</div><h4>Online & In-Person</h4><p>Consultations available online for clients worldwide or in-clinic</p></a>
+      <a href="contact.html" class="why-card"><div class="why-icon">💬</div><h4>Ongoing Support</h4><p>Regular follow-ups and adjustments for best results throughout your journey</p></a>
+      <a href="contact.html" class="why-card"><div class="why-icon">🏥</div><h4>Medical Expertise</h4><p>Specialised in chronic conditions — diabetes, PCOD, renal, liver & more</p></a>
+      <a href="contact.html" class="why-grid-item why-card"><div class="why-icon">❤️</div><h4>Proven Results</h4><p>20,000+ transformations speak for themselves — real results, real people</p></a>
     </div>
   </div>
 </section>
@@ -278,21 +278,21 @@
       <h2 class="section-title">What Our Clients <span class="gradient-text">Say</span></h2>
     </div>
     <div class="testimonial-grid">
-      <div class="testimonial-card">
+      <a href="contact.html" class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"I lost 22 kgs in 4 months with Dt. Rohini's plan. No crash dieting, no starvation — just a balanced, practical approach that actually fits my lifestyle."</p>
         <div class="testimonial-author"><div class="author-avatar">RS</div><div><div class="author-name">Rajinder Singh</div><div class="author-loc">Batala, Punjab</div></div></div>
-      </div>
-      <div class="testimonial-card">
+      </a>
+      <a href="contact.html" class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"My PCOD symptoms reduced significantly within 3 months. Rohini ji understands hormonal conditions deeply and her diet plan truly made a difference."</p>
         <div class="testimonial-author"><div class="author-avatar">PK</div><div><div class="author-name">Priya Khanna</div><div class="author-loc">Amritsar, Punjab</div></div></div>
-      </div>
-      <div class="testimonial-card">
+      </a>
+      <a href="contact.html" class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"Being a diabetic I was confused about what to eat. Dt. Rohini gave me a clear, delicious and effective plan. My sugar levels are now completely under control."</p>
         <div class="testimonial-author"><div class="author-avatar">MV</div><div><div class="author-name">Manpreet Verma</div><div class="author-loc">Dubai, UAE</div></div></div>
-      </div>
+      </a>
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="results.html" class="btn-secondary">See Transformation Stories <i class="fa fa-arrow-right"></i></a>
@@ -309,12 +309,12 @@
       <p class="section-subtitle">Swipe to see some of our incredible client transformations.</p>
     </div>
     <div class="results-scroller">
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM.jpeg" alt="Transformation 1" loading="lazy"/></div>
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (1).jpeg" alt="Transformation 2" loading="lazy"/></div>
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (2).jpeg" alt="Transformation 3" loading="lazy"/></div>
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM.jpeg" alt="Transformation 4" loading="lazy"/></div>
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM (1).jpeg" alt="Transformation 5" loading="lazy"/></div>
-      <div class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.21 PM.jpeg" alt="Transformation 6" loading="lazy"/></div>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM.jpeg" alt="Transformation 1" loading="lazy"/></a>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (1).jpeg" alt="Transformation 2" loading="lazy"/></a>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.19 PM (2).jpeg" alt="Transformation 3" loading="lazy"/></a>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM.jpeg" alt="Transformation 4" loading="lazy"/></a>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.20 PM (1).jpeg" alt="Transformation 5" loading="lazy"/></a>
+      <a href="results.html" class="rs-item"><img src="before affter picture/WhatsApp Image 2026-05-02 at 12.23.21 PM.jpeg" alt="Transformation 6" loading="lazy"/></a>
     </div>
     <div style="text-align:center;margin-top:2rem;">
       <a href="results.html" class="btn-secondary">View All Transformations <i class="fa fa-arrow-right"></i></a>
@@ -331,7 +331,7 @@
       <p class="section-subtitle">Find us at Batala and Amritsar — or connect online from anywhere in the world.</p>
     </div>
     <div class="schedule-cards">
-      <div class="schedule-card">
+      <a href="schedule.html" class="schedule-card">
         <div class="schedule-header batala">
           <span class="schedule-header-icon">📍</span>
           <div><h3>Batala Clinic</h3><p>Radha Krishna Colony, Gate No. 3</p></div>
@@ -340,8 +340,8 @@
           <div class="schedule-row"><span class="day-badge">Mon & Thu</span><span class="schedule-time">11:00 AM – 3:30 PM</span></div>
           <div class="schedule-row"><span class="day-badge">Sunday</span><span class="schedule-time">11:00 AM – 1:30 PM</span></div>
         </div>
-      </div>
-      <div class="schedule-card">
+      </a>
+      <a href="schedule.html" class="schedule-card">
         <div class="schedule-header amritsar">
           <span class="schedule-header-icon">📍</span>
           <div><h3>Amritsar Clinic</h3><p>Tuesday & Friday Sessions</p></div>
@@ -349,8 +349,8 @@
         <div class="schedule-body">
           <div class="schedule-row"><span class="day-badge amritsar">Tue & Fri</span><span class="schedule-time">11:00 AM – 3:30 PM</span></div>
         </div>
-      </div>
-      <div class="schedule-card">
+      </a>
+      <a href="schedule.html" class="schedule-card">
         <div class="schedule-header online">
           <span class="schedule-header-icon">💻</span>
           <div><h3>Online Worldwide</h3><p>Via WhatsApp / Video Call</p></div>
@@ -358,7 +358,7 @@
         <div class="schedule-body">
           <div class="schedule-row"><span class="day-badge" style="background:rgba(91,33,182,0.1);color:#5b21b6;">Mon – Sat</span><span class="schedule-time">Flexible Timings</span></div>
         </div>
-      </div>
+      </a>
     </div>
     <div style="text-align:center;margin-top:2rem;">
       <a href="schedule.html" class="btn-secondary">Full Schedule & Address <i class="fa fa-arrow-right"></i></a>
