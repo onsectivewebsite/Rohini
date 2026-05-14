@@ -17,21 +17,6 @@
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    .services-main-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; }
-    .svc-card { background:white; border-radius:20px; overflow:hidden; box-shadow:0 6px 30px rgba(0,0,0,0.07); transition:all 0.35s; border:1px solid rgba(0,0,0,0.04); }
-    .svc-card:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(0,0,0,0.13); }
-    .svc-top { padding:2rem; }
-    .svc-icon-wrap { width:64px; height:64px; border-radius:18px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1rem; }
-    .svc-top h3 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:#1a1a2e; margin-bottom:0.5rem; }
-    .svc-top p { font-size:0.87rem; color:#6b7280; line-height:1.6; }
-    .svc-divider { height:1px; background:#f3f4f6; margin:0 2rem; }
-    .svc-body { padding:1.2rem 2rem; }
-    .svc-body ul { display:flex; flex-direction:column; gap:0.5rem; }
-    .svc-body li { display:flex; gap:0.6rem; font-size:0.86rem; color:#374151; }
-    .svc-body li::before { content:'✓'; color:#2d7a3a; font-weight:700; flex-shrink:0; }
-    .svc-footer { padding:1rem 2rem 1.5rem; }
-    .svc-link { color:#2d7a3a; font-size:0.88rem; font-weight:600; display:inline-flex; align-items:center; gap:0.4rem; transition:all 0.3s; }
-    .svc-link:hover { gap:0.8rem; }
     .process-wrap { background:white; border-radius:24px; padding:3rem; box-shadow:0 6px 30px rgba(0,0,0,0.08); }
     .process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
     .process-step { text-align:center; padding:1.5rem 1rem; }
@@ -78,141 +63,149 @@
     </div>
     <div class="services-main-grid">
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(45,122,58,0.12),rgba(76,175,80,0.08))">⚖️</div>
-          <h3>Weight & Fat Loss</h3>
-          <p>Achieve your ideal weight sustainably — no crash diets, no starvation. Smart, balanced nutrition that lasts.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop" alt="Weight Loss Nutrition"/>
+          <div class="svc-img-overlay"><h3>Weight & Fat Loss</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Personalised calorie & macro targets</li>
-          <li>Indian food-based practical meal plans</li>
-          <li>Weekly body composition tracking</li>
-          <li>Metabolism-boosting strategies</li>
-          <li>Anti-craving & hunger management</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Achieve your ideal weight sustainably — no crash diets, no starvation. Smart, balanced nutrition that lasts.</p>
+          <ul>
+            <li>Personalised calorie & macro targets</li>
+            <li>Indian food-based practical meal plans</li>
+            <li>Weekly body composition tracking</li>
+            <li>Metabolism-boosting strategies</li>
+            <li>Anti-craving & hunger management</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(91,33,182,0.12),rgba(139,92,246,0.08))">💪</div>
-          <h3>Muscle Building</h3>
-          <p>Fuel your fitness goals with performance-optimised nutrition for strength and lean muscle growth.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Muscle Building"/>
+          <div class="svc-img-overlay"><h3>Muscle Building</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>High-protein personalised diet plans</li>
-          <li>Pre & post workout meal strategies</li>
-          <li>Supplement guidance</li>
-          <li>Lean bulk & clean bulk approaches</li>
-          <li>Recovery nutrition for athletes</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Fuel your fitness goals with performance-optimised nutrition for strength and lean muscle growth.</p>
+          <ul>
+            <li>High-protein personalised diet plans</li>
+            <li>Pre & post workout meal strategies</li>
+            <li>Supplement guidance</li>
+            <li>Lean bulk & clean bulk approaches</li>
+            <li>Recovery nutrition for athletes</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(190,18,60,0.1),rgba(244,63,94,0.06))">🩸</div>
-          <h3>Diabetes Management</h3>
-          <p>Keep blood sugar levels stable with a practical diet plan working alongside your medical care.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1490645935980-d14496b8621d?q=80&w=800&auto=format&fit=crop" alt="Diabetes Management"/>
+          <div class="svc-img-overlay"><h3>Diabetes Management</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Glycaemic index–focused meal plans</li>
-          <li>Type 1 & Type 2 diabetes plans</li>
-          <li>Low-sugar Indian recipe alternatives</li>
-          <li>Coordination with your doctor</li>
-          <li>Monitoring and follow-up support</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Keep blood sugar levels stable with a practical diet plan working alongside your medical care.</p>
+          <ul>
+            <li>Glycaemic index–focused meal plans</li>
+            <li>Type 1 & Type 2 diabetes plans</li>
+            <li>Low-sugar Indian recipe alternatives</li>
+            <li>Coordination with your doctor</li>
+            <li>Monitoring and follow-up support</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(14,116,144,0.1),rgba(6,182,212,0.06))">🦋</div>
-          <h3>Thyroid, PCOD & Hormonal</h3>
-          <p>Restore hormonal balance naturally with targeted nutrition for thyroid, PCOD, and infertility.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=800&auto=format&fit=crop" alt="Hormonal Disorders"/>
+          <div class="svc-img-overlay"><h3>Thyroid, PCOD & Hormonal</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Hypothyroid & hyperthyroid diet plans</li>
-          <li>PCOD / PCOS hormonal nutrition</li>
-          <li>Fertility-supportive diet strategies</li>
-          <li>Anti-inflammatory food protocols</li>
-          <li>Lifestyle & sleep nutrition guidance</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Restore hormonal balance naturally with targeted nutrition for thyroid, PCOD, and infertility.</p>
+          <ul>
+            <li>Hypothyroid & hyperthyroid diet plans</li>
+            <li>PCOD / PCOS hormonal nutrition</li>
+            <li>Fertility-supportive diet strategies</li>
+            <li>Anti-inflammatory food protocols</li>
+            <li>Lifestyle & sleep nutrition guidance</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(180,83,9,0.1),rgba(245,158,11,0.06))">🫀</div>
-          <h3>Liver & Renal Disorders</h3>
-          <p>Medically guided therapeutic diets to protect and support liver and kidney function during treatment.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1511690655020-366ea0024f2b?q=80&w=800&auto=format&fit=crop" alt="Liver and Renal Care"/>
+          <div class="svc-img-overlay"><h3>Liver & Renal Disorders</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Low-sodium, low-potassium kidney diets</li>
-          <li>Fatty liver reversal nutrition plans</li>
-          <li>Dialysis-compatible diet strategies</li>
-          <li>Protein management for renal patients</li>
-          <li>Hepatitis & cirrhosis dietary support</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Medically guided therapeutic diets to protect and support liver and kidney function during treatment.</p>
+          <ul>
+            <li>Low-sodium, low-potassium kidney diets</li>
+            <li>Fatty liver reversal nutrition plans</li>
+            <li>Dialysis-compatible diet strategies</li>
+            <li>Protein management for renal patients</li>
+            <li>Hepatitis & cirrhosis dietary support</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(146,64,14,0.1),rgba(217,119,6,0.06))">🌾</div>
-          <h3>Celiac Disease</h3>
-          <p>Complete gluten-free nutrition plans ensuring full nourishment while managing celiac safely.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1505253716362-af51f5c71b69?q=80&w=800&auto=format&fit=crop" alt="Celiac Disease"/>
+          <div class="svc-img-overlay"><h3>Celiac Disease</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Strict gluten-free meal planning</li>
-          <li>Indian gluten-free food alternatives</li>
-          <li>Nutritional deficiency correction</li>
-          <li>Cross-contamination guidance</li>
-          <li>Gut healing nutrition protocols</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Complete gluten-free nutrition plans ensuring full nourishment while managing celiac safely.</p>
+          <ul>
+            <li>Strict gluten-free meal planning</li>
+            <li>Indian gluten-free food alternatives</li>
+            <li>Nutritional deficiency correction</li>
+            <li>Cross-contamination guidance</li>
+            <li>Gut healing nutrition protocols</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(224,123,42,0.12),rgba(245,166,35,0.07))">👰</div>
-          <h3>Pre-Wedding Diet Plans</h3>
-          <p>Look and feel your absolute best on your special day — bespoke plans for brides and grooms.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1512436991641-61453982e5b9?q=80&w=800&auto=format&fit=crop" alt="Pre-Wedding Diet"/>
+          <div class="svc-img-overlay"><h3>Pre-Wedding Diet Plans</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>3 to 6 month wedding transformation plans</li>
-          <li>Skin glow & hair health nutrition</li>
-          <li>Energy for wedding functions</li>
-          <li>Healthy weight management</li>
-          <li>Post-wedding maintenance plans</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Look and feel your absolute best on your special day — bespoke plans for brides and grooms.</p>
+          <ul>
+            <li>3 to 6 month wedding transformation plans</li>
+            <li>Skin glow & hair health nutrition</li>
+            <li>Energy for wedding functions</li>
+            <li>Healthy weight management</li>
+            <li>Post-wedding maintenance plans</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
-      <div class="svc-card">
-        <div class="svc-top">
-          <div class="svc-icon-wrap" style="background:linear-gradient(135deg,rgba(6,95,70,0.1),rgba(16,185,129,0.06))">🦴</div>
-          <h3>Arthritis & More</h3>
-          <p>Anti-inflammatory nutrition plans to manage arthritis, joint pain, and other chronic conditions.</p>
+      <a href="contact.html" class="svc-card">
+        <div class="svc-img-header">
+          <img src="https://images.unsplash.com/photo-1544367567056-b0e27150aee2?q=80&w=800&auto=format&fit=crop" alt="Arthritis Diet"/>
+          <div class="svc-img-overlay"><h3>Arthritis & More</h3></div>
         </div>
-        <div class="svc-divider"></div>
-        <div class="svc-body"><ul>
-          <li>Anti-inflammatory diet protocols</li>
-          <li>Joint-supportive nutrient plans</li>
-          <li>Omega-3 and antioxidant-rich meals</li>
-          <li>Weight reduction to ease joint stress</li>
-          <li>Gout & uric acid management</li>
-        </ul></div>
-        <div class="svc-footer"><a href="contact.html" class="svc-link">Book Now <i class="fa fa-arrow-right"></i></a></div>
-      </div>
+        <div class="svc-body">
+          <p class="svc-desc">Anti-inflammatory nutrition plans to manage arthritis, joint pain, and other chronic conditions.</p>
+          <ul>
+            <li>Anti-inflammatory diet protocols</li>
+            <li>Joint-supportive nutrient plans</li>
+            <li>Omega-3 and antioxidant-rich meals</li>
+            <li>Weight reduction to ease joint stress</li>
+            <li>Gout & uric acid management</li>
+          </ul>
+        </div>
+        <div class="svc-footer"><span class="svc-link">Book Consultation <i class="fa fa-arrow-right"></i></span></div>
+      </a>
 
     </div>
   </div>
